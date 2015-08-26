@@ -6,8 +6,7 @@ addons:
     - apache2
 
 script:
-- touch /var/www/index.html
-- echo "Testing" >> index.html
+- echo "Testing" >> /var/www/index.html
 - ls -la /var/www/
 - wget http://localhost/index.html
 - ls -la
