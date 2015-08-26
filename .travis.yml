@@ -6,7 +6,9 @@ addons:
     - apache2
 
 script:
-- find -D tree /etc/apache2/
-- cat /etc/apache2/apache2.conf
-- cat /etc/apache2/httpd.conf
-- cat /etc/apache2/sites-available/default
+- touch /var/www/index.html
+- echo "Testing" >> index.html
+- ls -la /var/www/
+- wget http://localhost/index.html
+- ls -la
+- cat index.html
